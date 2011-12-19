@@ -1,0 +1,31 @@
+doctype 5
+html
+  head
+    meta http-equiv="content-type" content="text/html; charset=utf-8"
+    title Turnos
+    = stylesheet_link_tag 'reset', 'text', '960'
+    = stylesheet_link_tag 'layout', 'nav'
+    = csrf_meta_tag
+  body
+    div.container_16
+      div.grid_16 
+        h1#branding
+          a href="#" Sistema de Gestión de Turnos
+      .clear
+
+      .grid_16
+        ul.nav.main
+          li 
+            a href="#" Turnos
+          li 
+            a href="#" Medicos
+          li 
+            a href="#" Mi perfil
+          li 
+      .clear
+
+      div#content.grid_16 = yield
+      .clear
+      div#footer.grid_16
+    = javascript_include_tag :defaults
+    = javascript_include_tag 'jquery-fluid16', 'jquery.960grid-1.0.min'
